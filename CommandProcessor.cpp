@@ -4,9 +4,30 @@
 CommandProcessor::CommandProcessor(Jarvis& jarvis)
     : jarvis(jarvis)
 {
+    commands.push_back("help");
+    commands.push_back("status");
+    commands.push_back("shutdown");
 }
 
 void CommandProcessor::processCommand(const std::string& command)
 {
-    jarvis.respond(command);
+    if (command == "help")
+    {
+        jarvis.respond(command);
+        return;
+    }
+
+    if (command == "status")
+    {
+        jarvis.respond(command);
+        return;
+    }
+
+    if (command == "shutdown")
+    {
+        jarvis.respond(command);
+        return;
+    }
+
+    jarvis.respond("unknown");
 }

@@ -145,6 +145,7 @@
     <ClCompile Include="StarkSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Command.h" />
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="Jarvis.h" />
     <ClInclude Include="StarkSystem.h" />
