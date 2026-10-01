@@ -1,6 +1,11 @@
 #include "StarkSystem.h"
 #include <iostream>
 
+StarkSystem::StarkSystem()
+    : commandProcessor(jarvis)
+{
+}
+
 void StarkSystem::start()
 {
     std::cout << "STARK INDUSTRIES\n";
