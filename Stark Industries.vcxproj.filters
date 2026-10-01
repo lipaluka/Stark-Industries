@@ -21,9 +21,15 @@
     <ClCompile Include="StarkSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CommandProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StarkSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandProcessor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

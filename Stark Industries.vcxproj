@@ -139,10 +139,12 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CommandProcessor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StarkSystem.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="StarkSystem.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
