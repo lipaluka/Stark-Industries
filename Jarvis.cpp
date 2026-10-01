@@ -12,10 +12,14 @@ void Jarvis::respond(const std::string& command)
     }
     else if (command == "status")
     {
-        std::cout << "\nAll systems are currently operational.\n";
+        systemStatus.display();
     }
     else if (command == "shutdown")
     {
         std::cout << "\nUnderstood. Shutting down Stark System.\n";
+    }
+    else
+    {
+        std::cout << "\nUnknown command.\n";
     }
 }
