@@ -143,6 +143,7 @@
     <ClCompile Include="Jarvis.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="StarkSystem.cpp" />
+    <ClCompile Include="Subsystem.cpp" />
     <ClCompile Include="SystemStatus.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="Jarvis.h" />
     <ClInclude Include="StarkSystem.h" />
+    <ClInclude Include="Subsystem.h" />
     <ClInclude Include="SystemStatus.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

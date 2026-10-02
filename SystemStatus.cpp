@@ -1,6 +1,11 @@
 #include "SystemStatus.h"
 #include <iostream>
 
+SystemStatus::SystemStatus()
+    : Subsystem("System Status")
+{
+}
+
 void SystemStatus::display()
 {
     std::cout << "\nSTARK SYSTEM STATUS\n\n";
