@@ -9,6 +9,7 @@ void Jarvis::respond(const std::string& command)
         std::cout << "help\n";
         std::cout << "status\n";
         std::cout << "shutdown\n";
+        std::cout << "security\n";
     }
     else if (command == "status")
     {
@@ -18,8 +19,13 @@ void Jarvis::respond(const std::string& command)
     {
         std::cout << "\nUnderstood. Shutting down Stark System.\n";
     }
+    else if (command == "security")
+    {
+        securitySystem.displayStatus();
+    }
     else
     {
         std::cout << "\nUnknown command.\n";
     }
+
 }

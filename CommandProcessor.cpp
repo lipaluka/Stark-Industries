@@ -7,6 +7,7 @@ CommandProcessor::CommandProcessor(Jarvis& jarvis)
     commands.push_back("help");
     commands.push_back("status");
     commands.push_back("shutdown");
+    commands.push_back("security");
 }
 
 void CommandProcessor::processCommand(const std::string& command)
@@ -24,6 +25,11 @@ void CommandProcessor::processCommand(const std::string& command)
     }
 
     if (command == "shutdown")
+    {
+        jarvis.respond(command);
+        return;
+    }
+    if (command == "security")
     {
         jarvis.respond(command);
         return;
