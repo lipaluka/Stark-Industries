@@ -15,6 +15,8 @@ void Jarvis::respond(const std::string& command)
         std::cout << "status\n";
         std::cout << "shutdown\n";
         std::cout << "security\n";
+        std::cout << "security on\n";
+        std::cout << "security off\n";
     }
     else if (command == "status")
     {
@@ -27,6 +29,16 @@ void Jarvis::respond(const std::string& command)
     else if (command == "security")
     {
         securitySystem.displayStatus();
+    }
+    else if (command == "security on")
+    {
+        securitySystem.activate();
+        std::cout << "\nSecurity system activated.\n";
+    }
+    else if (command == "security off")
+    {
+        securitySystem.deactivate();
+        std::cout << "\nSecurity system deactivated.\n";
     }
     else
     {

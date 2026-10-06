@@ -34,6 +34,16 @@ void CommandProcessor::processCommand(const std::string& command)
         jarvis.respond(command);
         return;
     }
+    if (command == "security off")
+    {
+        jarvis.respond(command);
+        return;
+    }
+    if (command == "security on")
+    {
+        jarvis.respond(command);
+        return;
+    }
 
     jarvis.respond("unknown");
 }
