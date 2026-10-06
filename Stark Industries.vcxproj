@@ -143,6 +143,7 @@
     <ClCompile Include="CoreSystem.cpp" />
     <ClCompile Include="Jarvis.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NetworkSystem.cpp" />
     <ClCompile Include="SecuritySystem.cpp" />
     <ClCompile Include="StarkSystem.cpp" />
     <ClCompile Include="Subsystem.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="CommandProcessor.h" />
     <ClInclude Include="CoreSystem.h" />
     <ClInclude Include="Jarvis.h" />
+    <ClInclude Include="NetworkSystem.h" />
     <ClInclude Include="SecuritySystem.h" />
     <ClInclude Include="StarkSystem.h" />
     <ClInclude Include="Subsystem.h" />

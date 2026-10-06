@@ -2,7 +2,10 @@
 #include <iostream>
 
 Jarvis::Jarvis()
-    : securitySystem(), coreSystem(), systemStatus(securitySystem)
+    : securitySystem(),
+    coreSystem(),
+    networkSystem(),
+    systemStatus(securitySystem, coreSystem, networkSystem)
 {
 }
 
@@ -20,6 +23,9 @@ void Jarvis::respond(const std::string& command)
         std::cout << "core\n";
         std::cout << "core on\n";
         std::cout << "core off\n";
+        std::cout << "network\n";
+        std::cout << "network on\n";
+        std::cout << "network off\n";
     }
     else if (command == "status")
     {
@@ -56,6 +62,20 @@ void Jarvis::respond(const std::string& command)
     {
         coreSystem.deactivate();
         std::cout << "\nCore system deactivated.\n";
+    }
+    else if (command == "network")
+    {
+        networkSystem.displayStatus();
+    }
+    else if (command == "network on")
+    {
+        networkSystem.activate();
+        std::cout << "\nNetwork system activated.\n";
+    }
+    else if (command == "network off")
+    {
+        networkSystem.deactivate();
+        std::cout << "\nNetwork system deactivated.\n";
     }
     else
     {
