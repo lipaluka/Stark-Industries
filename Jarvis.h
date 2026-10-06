@@ -7,9 +7,10 @@
 class Jarvis
 {
 private:
-    SystemStatus systemStatus;
     SecuritySystem securitySystem;
+    SystemStatus systemStatus;
 
 public:
+    Jarvis();
     void respond(const std::string& command);
 };

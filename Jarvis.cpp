@@ -1,6 +1,11 @@
 #include "Jarvis.h"
 #include <iostream>
 
+Jarvis::Jarvis()
+    : securitySystem(), systemStatus(securitySystem)
+{
+}
+
 void Jarvis::respond(const std::string& command)
 {
     if (command == "help")
@@ -27,5 +32,4 @@ void Jarvis::respond(const std::string& command)
     {
         std::cout << "\nUnknown command.\n";
     }
-
 }
