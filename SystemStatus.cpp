@@ -1,11 +1,13 @@
 #include "SystemStatus.h"
 #include <iostream>
 
-SystemStatus::SystemStatus(SecuritySystem& securitySystem, CoreSystem& coreSystem, NetworkSystem& networkSystem)
+SystemStatus::SystemStatus(SecuritySystem& securitySystem, CoreSystem& coreSystem, NetworkSystem& networkSystem,
+    PowerSystem& powerSystem)
     : Subsystem("System Status"),
     securitySystem(securitySystem),
     coreSystem(coreSystem),
-    networkSystem(networkSystem)
+    networkSystem(networkSystem),
+    powerSystem(powerSystem)
 {
 }
 
@@ -15,5 +17,6 @@ void SystemStatus::display()
     coreSystem.displayStatus();
     securitySystem.displayStatus();
     networkSystem.displayStatus();
+    powerSystem.displayStatus();
     
 }

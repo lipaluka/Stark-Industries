@@ -78,6 +78,23 @@ void CommandProcessor::processCommand(const std::string& command)
         jarvis.respond(command);
         return;
     }
+    if (command == "power")
+    {
+        jarvis.respond(command);
+        return;
+    }
+
+    if (command == "power on")
+    {
+        jarvis.respond(command);
+        return;
+    }
+
+    if (command == "power off")
+    {
+        jarvis.respond(command);
+        return;
+    }
 
     jarvis.respond("unknown");
 }

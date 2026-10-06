@@ -5,6 +5,7 @@
 #include "SecuritySystem.h"
 #include "CoreSystem.h"
 #include "NetworkSystem.h"
+#include "PowerSystem.h"
 
 class Jarvis
 {
@@ -13,6 +14,7 @@ private:
     CoreSystem coreSystem;
     NetworkSystem networkSystem;
     SystemStatus systemStatus;
+    PowerSystem powerSystem;
 
 public:
     Jarvis();
