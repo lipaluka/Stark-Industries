@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CommandProcessor.cpp" />
+    <ClCompile Include="CoreSystem.cpp" />
     <ClCompile Include="Jarvis.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SecuritySystem.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandProcessor.h" />
+    <ClInclude Include="CoreSystem.h" />
     <ClInclude Include="Jarvis.h" />
     <ClInclude Include="SecuritySystem.h" />
     <ClInclude Include="StarkSystem.h" />

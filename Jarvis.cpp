@@ -2,7 +2,7 @@
 #include <iostream>
 
 Jarvis::Jarvis()
-    : securitySystem(), systemStatus(securitySystem)
+    : securitySystem(), coreSystem(), systemStatus(securitySystem)
 {
 }
 
@@ -17,6 +17,9 @@ void Jarvis::respond(const std::string& command)
         std::cout << "security\n";
         std::cout << "security on\n";
         std::cout << "security off\n";
+        std::cout << "core\n";
+        std::cout << "core on\n";
+        std::cout << "core off\n";
     }
     else if (command == "status")
     {
@@ -40,8 +43,23 @@ void Jarvis::respond(const std::string& command)
         securitySystem.deactivate();
         std::cout << "\nSecurity system deactivated.\n";
     }
+    else if (command == "core")
+    {
+        coreSystem.displayStatus();
+    }
+    else if (command == "core on")
+    {
+        coreSystem.activate();
+        std::cout << "\nCore system activated.\n";
+    }
+    else if (command == "core off")
+    {
+        coreSystem.deactivate();
+        std::cout << "\nCore system deactivated.\n";
+    }
     else
     {
         std::cout << "\nUnknown command.\n";
     }
+
 }

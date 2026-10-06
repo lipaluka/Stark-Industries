@@ -3,11 +3,13 @@
 #include <string>
 #include "SystemStatus.h"
 #include "SecuritySystem.h"
+#include "CoreSystem.h"
 
 class Jarvis
 {
 private:
     SecuritySystem securitySystem;
+    CoreSystem coreSystem;
     SystemStatus systemStatus;
 
 public:
