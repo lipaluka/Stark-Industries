@@ -1,22 +1,17 @@
 #include "SystemStatus.h"
 #include <iostream>
 
-SystemStatus::SystemStatus(SecuritySystem& securitySystem, CoreSystem& coreSystem, NetworkSystem& networkSystem,
-    PowerSystem& powerSystem)
-    : Subsystem("System Status"),
-    securitySystem(securitySystem),
-    coreSystem(coreSystem),
-    networkSystem(networkSystem),
-    powerSystem(powerSystem)
+SystemStatus::SystemStatus(const std::vector<Subsystem*>& subsystems)
+    : Subsystem("System Status"), subsystems(subsystems)
 {
 }
 
-void SystemStatus::display()
+void SystemStatus::display() const
 {
     std::cout << "\nSTARK SYSTEM STATUS\n\n";
-    coreSystem.displayStatus();
-    securitySystem.displayStatus();
-    networkSystem.displayStatus();
-    powerSystem.displayStatus();
-    
+
+    for (const Subsystem* subsystem : subsystems)
+    {
+        subsystem->displayStatus();
+    }
 }

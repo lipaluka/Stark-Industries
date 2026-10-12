@@ -1,21 +1,14 @@
 #pragma once
 
 #include "Subsystem.h"
-#include "SecuritySystem.h"
-#include "CoreSystem.h"
-#include "NetworkSystem.h"
-#include "PowerSystem.h"
+#include <vector>
 
 class SystemStatus : public Subsystem
 {
 private:
-    SecuritySystem& securitySystem;
-    CoreSystem& coreSystem;
-    NetworkSystem& networkSystem;
-    PowerSystem& powerSystem;
+    std::vector<Subsystem*> subsystems;
 
 public:
-    SystemStatus(SecuritySystem& securitySystem, CoreSystem& coreSystem, NetworkSystem& networkSystem, 
-        PowerSystem& powerSystem);
-    void display();
+    SystemStatus(const std::vector<Subsystem*>& subsystems);
+    void display() const;
 };

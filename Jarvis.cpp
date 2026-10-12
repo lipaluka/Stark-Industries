@@ -6,7 +6,13 @@ Jarvis::Jarvis()
     coreSystem(),
     networkSystem(),
     powerSystem(),
-    systemStatus(securitySystem, coreSystem, networkSystem, powerSystem)
+    subsystems{
+        &coreSystem,
+        &networkSystem,
+        &powerSystem,
+        &securitySystem
+    },
+    systemStatus(subsystems)
 {
 }
 
