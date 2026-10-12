@@ -1,11 +1,24 @@
 #include "Subsystem.h"
+#include <iostream>
 
 Subsystem::Subsystem(const std::string& name)
-    : name(name)
+    : name(name), active(true)
 {
 }
 
-const std::string& Subsystem::getName() const
+void Subsystem::activate()
 {
-    return name;
+    active = true;
+}
+
+void Subsystem::deactivate()
+{
+    active = false;
+}
+
+void Subsystem::displayStatus() const
+{
+    std::cout << name << " ............ "
+        << (active ? "ONLINE" : "OFFLINE")
+        << "\n";
 }

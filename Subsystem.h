@@ -6,8 +6,13 @@ class Subsystem
 {
 protected:
     std::string name;
+    bool active;
 
 public:
     Subsystem(const std::string& name);
-    const std::string& getName() const;
+
+    void activate();
+    void deactivate();
+    void displayStatus() const;
 };
+

@@ -2,23 +2,7 @@
 #include <iostream>
 
 CoreSystem::CoreSystem()
-    : Subsystem("Core"), active(true)
+    : Subsystem("Core")
 {
 }
 
-void CoreSystem::activate()
-{
-    active = true;
-}
-
-void CoreSystem::deactivate()
-{
-    active = false;
-}
-
-void CoreSystem::displayStatus() const
-{
-    std::cout << name << " ............ "
-        << (active ? "ONLINE" : "OFFLINE")
-        << "\n";
-}
